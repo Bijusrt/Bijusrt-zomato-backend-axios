@@ -3,4 +3,4 @@ This is a simple server made on express.js with axios to fetch data from zomato 
 
 This has been hosted on hiroku
 
-URl : 
+URL : https://zomato-backend-axios.herokuapp.com/ 
