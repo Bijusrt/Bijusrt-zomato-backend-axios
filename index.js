@@ -31,6 +31,19 @@ axios.interceptors.request.use(
 
 )
 
+app.get('/',(req,res)=>{
+    
+    res.json({
+        
+        "For Categories" : "/categories",
+        
+        "For Geocode" : "/geocode/lat=${latitude}&/lon=${longitude}",
+        
+        "For City" : "/search/city?query=${city_name}"
+        
+    });
+});
+
 app.get('/categories',(req,res)=>{
 
     axios.get('https://developers.zomato.com/api/v2.1/categories').then(result=>{
