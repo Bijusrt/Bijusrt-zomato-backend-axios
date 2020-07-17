@@ -32,16 +32,17 @@ axios.interceptors.request.use(
 )
 
 app.get('/',(req,res)=>{
-    
-    res.json({
-        
+
+    res.status(200).json({
+
         "For Categories" : "/categories",
-        
-        "For Geocode" : "/geocode/lat=${latitude}&/lon=${longitude}",
-        
-        "For City" : "/search/city?query=${city_name}"
-        
-    });
+
+        "For Geocode" : "/geocode?lat=laitude&lon=longitude",
+
+        "For City" : "/search/city?query=city_name"
+
+    })
+    
 });
 
 app.get('/categories',(req,res)=>{
